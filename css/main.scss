@@ -1,0 +1,196 @@
+@font-face {
+    font-family: "Helvetica-ExtraBold";
+    src: url("HelveticaNowText-ExtraBold.otf");
+}
+
+@font-face {
+    font-family: "Helvetica-ExtraLight";
+    src: url("HelveticaNowText-ExtraLight.otf");
+}
+
+@font-face {
+    font-family: "Helvetica-Regular";
+    src: url("HelveticaNowText-Regular.otf");
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    color: #fffdee;
+    background: #222222;
+    font-family: "Helvetica-Regular";
+}
+
+.lc {
+    &-content {
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        width: 100%;
+        height: 100%;
+    }
+
+    &-main {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        width: 100%;
+        height: 100%;
+
+        &-top {
+            min-height: 100px;
+        }
+
+        &-center {
+            display: flex;
+            align-items: center;
+            height: 100%;
+        }
+
+        &-footer {
+            min-height: 100px;
+            font-family: "Helvetica-ExtraLight";
+
+
+        }
+
+        &-menu {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            font-family: "Helvetica-ExtraLight";
+            height: 100%;
+            margin-top: 30px;
+
+            & .contact {
+                font-size: 25px;
+
+                & a {
+                    color: #fff;
+                    text-decoration: underline;
+                    font-weight: 100;
+
+                    &:hover {
+                        color: #fff;
+                        text-decoration: underline;
+                    }
+
+                }
+
+
+                @media (max-width: 991px) {
+                    font-size: 22px;
+                    // width: 100%;
+                    // text-align: center;
+
+                    & a {
+                        text-decoration: underline;
+                    }
+                }
+
+            }
+        }
+
+        &-block {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+
+            & .logo>img {
+
+                // font-family: "SpaceMono-Bold";
+                // font-size: 80px;
+                // font-weight: 700;
+                // line-height: 1;
+                // max-width: 900px;
+                // padding: 80px 0;
+
+                @media (max-width: 991px) {
+                    width: 100%;
+                    padding: 0 30px;
+                    // text-align: center;
+                    // max-width: unset;
+                    // width: 100%;
+                    // font-size: 50px;
+                    // line-height: 70px;
+                    // padding: 10px 0;
+                    // padding: 0;
+
+                }
+            }
+
+            & .description {
+                display: flex;
+                justify-content: flex-end;
+                text-align: right;
+
+                font-size: 32px;
+
+                & span {
+                    max-width: 700px;
+                }
+
+                @media (max-width: 991px) {
+
+                    // text-align: center;
+                    max-width: unset;
+                    width: 100%;
+                    font-size: 26px;
+                    margin-top: 40px;
+
+
+                }
+            }
+        }
+
+        &-info {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 100%;
+            // font-size: 18px;
+
+            & .left {
+                @media (max-width: 991px) {
+                    // font-size: 22px;
+                    width: 100%;
+                    text-align: center;
+                }
+            }
+
+            & .right {
+                font-family: "SpaceMono-Bold";
+                text-align: right;
+            }
+
+            @media (max-width: 991px) {
+                font-size: 12px;
+            }
+        }
+    }
+
+    &-video {
+        position: fixed;
+        top: 0px;
+        left: 0px;
+        width: 100vw;
+        height: 100vh;
+        overflow: hidden;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        & video {
+            height: 110vh;
+            filter: blur(5px);
+
+            // @media (max-width: 991px) {
+            //     filter: blur(5px);
+            // }
+        }
+
+    }
+
+}
